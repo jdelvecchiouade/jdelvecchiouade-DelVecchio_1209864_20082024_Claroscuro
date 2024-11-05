@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messi</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body.light-mode {
+        background-color: #a50044;
+        color: #004d98;
+      }
+      .light-mode .navbar {
+        background-color: #004d98;
+      }
+      .light-mode .card,
+      .light-mode .btn-light {
+        background-color: #a50044;
+        color: #ffffff;
+      }
+      body.dark-mode {
+        background-color: #1b1b1b;
+        color: #c8c8c8;
+      }
+      .dark-mode .navbar,
+      .dark-mode .card {
+        background-color: #333333;
+      }
+      .dark-mode .table {
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body class="light-mode">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand text-white" href="#">Lionel Messi</a>
+      <div class="ml-auto">
+        <button id="modo-claro" class="btn btn-light">Modo Claro</button>
+        <button id="modo-oscuro" class="btn btn-dark">Modo Oscuro</button>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h1 class="mb-4">Rendimiento</h1>
+      <img
+        src="/images/messi.webp"
+        alt="messi"
+        class="img-fluid mb-4 rounded shadow"
+      />
+
+      <div class="card p-4">
+        <h2 class="mb-3">Lionel Messi</h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Goles</th>
+              <th>Partidos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1058</td>
+              <td>890</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#modo-claro").click(function () {
+          $("body").removeClass("dark-mode").addClass("light-mode");
+        });
+        $("#modo-oscuro").click(function () {
+          $("body").removeClass("light-mode").addClass("dark-mode");
+        });
+      });
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
